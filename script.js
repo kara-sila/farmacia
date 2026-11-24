@@ -11,6 +11,9 @@ function openLeaflet(key, button) {
   const photo = $("leaflet-photo");
   photo.src = p.img;
   photo.alt = p.alt;
+  const buy = $("leaflet-buy");
+  buy.textContent = p.buy[0];
+  buy.href = p.buy[1];
 
   const dl = $("leaflet-facts");
   dl.replaceChildren(...p.facts.flatMap(([k, v]) => {

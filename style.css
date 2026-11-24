@@ -467,12 +467,31 @@ dialog[open] { animation: unfold .35s cubic-bezier(.2,.8,.2,1); }
 .close:hover { background: rgba(43,29,20,.08); }
 .close:focus-visible { outline: 2px solid var(--celadon-lo); outline-offset: 2px; }
 
-.leaflet-img {
-  display: grid;
-  place-items: center;
+.leaflet-side {
   align-self: start;
   position: sticky;
   top: 0;
+  display: grid;
+  gap: 14px;
+}
+.get {
+  display: block;
+  padding: 13px 18px;
+  text-align: center;
+  font-family: var(--body);
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(180deg, #8cc4b1, var(--celadon-lo));
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 2px 4px rgba(0,0,0,.2);
+}
+.get:hover { background: linear-gradient(180deg, #7fb9a6, #3f7362); }
+.get:focus-visible { outline: 3px solid var(--celadon-hi); outline-offset: 2px; }
+.leaflet-img {
+  display: grid;
+  place-items: center;
   padding: 28px 20px;
   background: rgba(127, 185, 166, .14);
   border-radius: 4px;
@@ -530,7 +549,7 @@ dd { margin: 0; }
   .crest { left: 0; right: 0; }
   .fascia h1 span { display: block; margin: 4px 0 0; vertical-align: 0; }
   .leaflet-inner { grid-template-columns: 1fr; gap: 20px; padding: 52px 20px 24px; }
-  .leaflet-img { position: static; }
+  .leaflet-side { position: static; }
   .leaflet-img img { max-height: 220px; }
   .leaflet-text h2 { font-size: 40px; }
   .groups { grid-template-columns: 1fr; gap: 2px; }
